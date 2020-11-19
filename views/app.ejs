@@ -14,14 +14,14 @@
         
         <title>Prayer Times</title>
         
-
+        <script src='https://unpkg.com/@turf/turf/turf.min.js'></script>
         <script src="js/locating.js"></script>
         <script src="js/main.js"></script>
     </head>
-    <body>
+    <body id="bg">
         <div class="container-grid">
             <nav>
-                <h1 class="">Salah Times</h1>
+                <h1  class="">Salah Times</h1>
                 
                 <div class="menu-icon" onclick="toggleBar(this)">
                     <div class="bar1"></div>
@@ -90,6 +90,18 @@
                     </div>
                     <div class="j-container">
                         <h2 class="j-title">Jamaat Times:</h2>
+                    
+                        <div class="j-dropdown">
+                            <a href="#" id="dropdown-item" class="dropdown-button" onclick="showDropdown()">Select a Mosque:<span class="material-icons">keyboard_arrow_down</span></a>
+                        
+                            <ul class="j-dropdown-list" id="dropdown" hideDropdown()>
+                                <li onclick="hideDropdown(), getJamatTimes(this)">Masjid-e-Noor</li>
+                                <li onclick="hideDropdown(), getJamatTimes(this)">Jami Mosque</li>
+                                <li onclick="hideDropdown(), getJamatTimes(this)">Masjid-e-Hidaya</li>
+                                <li onclick="hideDropdown(), getJamatTimes(this)">Didsbury Mosque</li>
+                            </ul>
+                        </div>                        
+
                         <div class="jamat-times">
                             <div class="jamat-titles">
                                 <p>Fajr:</p>
@@ -110,24 +122,12 @@
                 </div>
             </main>
             
-            <!-- <div class="container-content">
-                <div class="content1">
-                    <h1></h1>
-                </div>
-                <div class="content2">
-                    <h1></h1>
-                </div>
-                <div class="content3">
-                    <h1></h1>
-                </div>
-            </div> -->
-            
             <div class="footer">
-                <p>Developed by Muhammad R. <br>
                     <img src="assets/github-32px.png" class="github-icon">
                     <a href="https://github.com/mo3r99/SalahTimes">View on Github.</a>
                 </p>
             </div>
         </div>
+
     </body>
 </html>

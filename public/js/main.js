@@ -36,3 +36,11 @@ function toggleBar(x) {
     
     //console.log(open); //For debugging
 }
+
+function showDropdown() {
+    document.getElementById("dropdown").style.display = "block";
+}
+
+function hideDropdown() {
+    document.getElementById("dropdown").style.display = "none";
+}
