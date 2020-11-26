@@ -11,7 +11,7 @@ app.get("/", function(req,res){
     res.render("app.ejs")
 })
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
     (async () =>{
         let url = "https://masjidenoor.com/"
         let browser = await puppeteer.launch()
